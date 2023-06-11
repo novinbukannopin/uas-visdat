@@ -1,0 +1,659 @@
+company,valuation,valuation_date,industry,country
+ByteDance,140.0,06-2022,Internet,China
+SpaceX,127.0,06-2022,Aerospace,US
+Shein,100.0,06-2022,E-commerce,China
+Stripe,50.0,03-2023,Financial services,US / Ireland
+Canva,40.0,09-2021,Graphic design,Australia
+Checkout.com,40.0,06-2022,Financial technology,UK
+Instacart,24.0,03-2022,Retail,US
+Databricks,38.0,06-2022,Software,US
+Revolut,33.0,06-2022,Financial technology,UK
+Epic Games,31.5,06-2022,Video games,US
+Telegram,30.0,01-2021,Internet,UK / UAE
+Fanatics,27.0,06-2022,E-commerce,US
+Chime,25.0,06-2022,Financial services,US
+Byju's,22.0,06-2022,Educational technology,India
+J&T Express,20.0,06-2022,Logistics,Indonesia
+Xiaohongshu,20.0,06-2022,E-commerce,China
+Miro,17.5,01-2022,Software,US
+PayFit,2.1,01-2022,Software,France
+Nature's Fynd,4.040517503805176,07-2021,Consumer packaged goods,US
+Trendyol,16.5,05-2021,E-commerce,Turkey
+Yuanfudao,15.5,10-2020,Educational technology,China
+Discord,15.0,09-2021,Software,US
+DJI,15.0,09-2016,Technology,China
+GoPuff,15.0,07-2021,E-commerce,US
+Plaid,13.4,04-2021,Financial technology,US
+OpenSea,13.3,01-2022,Blockchain,US
+Grammarly,13.0,11-2021,Collaborative software,Ukraine[29]/ United States[30]
+Devoted Health,12.6,10-2021,Healthcare,US
+Faire,12.4,11-2021,E-commerce,US
+Brex,12.3,10-2021,Finance,US
+Biosplice Therapeutics,12.0,04-2021,Health,US
+Bitmain,12.0,06-2018,Cryptocurrency,China
+GoodLeap,12.0,10-2021,Financial technology,US
+SenseTime,12.0,01-2021,Artificial intelligence,China / Hong Kong
+Getir,12.0,03-2022,Retail,Turkey
+Northvolt,11.75,06-2021,Batteries,Sweden
+Airtable,11.0,12-2021,Collaborative software,US
+Celonis,11.0,06-2021,Software,Germany
+ZongMu Technology,11.0,06-2021,Self-driving cars,China
+Bolt Financial,11.0,01-2022,Financial technology,US
+Alchemy,10.2,01-2022,Blockchain,US
+Swiggy,10.7,01-2022,Food delivery,India
+Aurora,10.0,12-2020,Self-driving cars,US
+Chehaoduo,10.0,07-2021,Marketplace,China
+Digital Currency Group,10.0,11-2021,Venture capital,US
+Figma,10.0,06-2021,Software,US
+Gusto,10.0,08-2021,Software,US
+KuCoin,10.0,05-2022,Cryptocurrency,Seychelles
+Lalamove,10.0,01-2021,Supply chain management,Hong Kong / China
+Notion Labs,10.0,10-2021,Productivity software,US
+Reddit,10.0,08-2021,Internet media,US
+Ripple,10.0,12-2019,Cryptocurrency,US
+Talkdesk,10.0,08-2021,Software as a service,Portugal / US
+Oyo,9.6,08-2021,Hospitality,India
+Klaviyo,9.5,05-2021,Marketing,US
+OutSystems,9.5,02-2021,Software development,US[59]
+ServiceTitan,9.5,06-2021,Software,US
+HeyTea,9.3,07-2021,Retail,China
+Tanium,9.0,06-2020,Cybersecurity,US
+Kavak,8.7,10-2021,Marketplace,Mexico
+Rapyd,8.7,08-2021,Financial technology,UK
+Nuro,8.6,11-2021,Robotics,US
+Snyk,8.5,09-2021,Application security,UK
+Bolt,8.4,01-2022,Transportation,Estonia
+Lacework,8.3,11-2021,Cloud security,US
+Ramp,8.1,03-2022,Financial technology,US
+Tempus,8.1,12-2020,Health,US
+Dream11,8.0,11-2021,Fantasy sports,India
+Flexport,8.0,02-2022,Logistics,US
+StarkWare Industries,8.0,05-2022,Blockchain,Israel
+Hopin,7.75,08-2021,Virtual event,UK
+Dapper Labs,7.6,09-2021,NFT,Canada
+Netskope,7.5,07-2021,Computer security,US
+Razorpay,7.5,12-2021,Financial technology,India
+Carta,7.4,08-2021,Software,US
+Ola Cabs,7.3,12-2021,Transportation,India
+Scale AI,7.3,04-2021,Artificial intelligence,US
+Gong,7.25,06-2021,Artificial intelligence,US
+TripActions,7.25,10-2021,Travel,US
+Automation Anywhere,6.8,11-2019,Robotic process automation,US
+1Password,6.8,07-2021,Password manager,Canada
+WeDoctor,6.8,02-2021,Healthcare,China
+Yanolja,6.7,07-2021,Hospitality,South Korea
+Ziroom,6.6,03-2020,Real estate technology,China
+Klarna,6.5,07-2022,Financial technology,Sweden
+Mollie,6.5,06-2021,Financial technology,Netherlands
+Rippling,11.25,08-2022,Workforce management,US
+CRED,6.4,06-2022,Financial technology,India
+DataRobot,6.3,07-2021,Artificial intelligence,US
+Personio,6.3,10-2021,Software,Germany
+Doctolib,6.2,08-2022,Healthcare,France
+Lianjia (Homelink),6.04,04-2017,Real estate,China
+Better.com,6.0,04-2021,Financial services,US
+Wiz,6.0,10-2021,Cybersecurity,Israel
+Xingsheng Youxuan,6.0,01-2021,Retail,China
+Back Market,5.8,08-2022,Marketplace,France
+Vice Media,5.7,02-2020,Mass media,US
+Contentsquare,5.6,08-2022,Software as a service,France
+Fivetran,5.6,09-2021,Data infrastructure,US
+PharmEasy,5.6,10-2021,Health technology,India
+Postman,5.6,08-2021,Software as a service,India / US
+Airwallex,5.5,11-2021,Financial services,Australia / Hong Kong
+PhonePe,5.5,12-2020,Financial technology,India
+Viva Republica (Toss),5.48,06-2021,Financial technology,South Korea
+Pony.ai,5.3,11-2020,Artificial intelligence,China / US
+Trade Republic,5.3,05-2021,Financial technology,Germany
+Rappi,5.25,07-2021,Transportation,Colombia
+Blockchain.com,5.2,03-2021,Cryptocurrency,UK
+OneTrust,5.1,12-2020,Cybersecurity,UK / US
+SambaNova,5.1,04-2021,Artificial intelligence,US
+Collibra,5.0,01-2019,Data governance,Belgium
+Thrasio,5.0,10-2021,Holding company,US
+CloudKitchens,5.0,11-2019,Ghost kitchen,US
+Hello TransTech,5.0,03-2021,Transportation,China
+Hopper,5.0,08-2021,Travel,Canada
+JUUL Labs,5.0,10-2019,Electronic cigarettes,US
+OfBusiness,5.0,12-2021,B2B e-commerce,India
+Ola Electric,5.0,01-2022,Electric vehicles,India
+Qonto,5.0,08-2022,Finance,France
+Ro,5.0,03-2021,Health technology,US
+Royole,5.0,08-2018,Flexible electronics,China / US
+UBtech Robotics,5.0,05-2018,Robotics,China
+GetBlock,4.6,06-2020,Blockchain,Georgia
+United Imaging Healthcare,5.0,09-2017,Healthcare,China
+Zepz,5.0,08-2021,Financial technology,UK
+Animoca Brands,5.0,01-2022,Blockchain gaming,Hong Kong
+Octopus Energy,5.0,12-2021,Energy supply,UK
+Meesho,4.9,09-2021,E-commerce,India
+Pleo,4.7,12-2021,Financial technology,Denmark
+Anduril Industries,4.6,06-2021,Defense technology,US
+Checkr,4.6,08-2021,Human resource management,US
+Dataiku,4.6,08-2021,Artificial intelligence,France / US
+Sorare,4.6,08-2022,Fantasy sports,France
+Magic Leap,4.5,02-2016,Augmented reality,US
+Socure,4.5,11-2021,Identity management,US
+Vinted,4.5,05-2021,Marketplace,Lithuania
+Zenefits,4.5,05-2015,Human resource management,US
+Meizu,4.4,10-2016,Consumer electronics,China
+Outreach,4.4,06-2021,Sales,US
+Arctic Wolf Networks,4.3,07-2021,Cybersecurity,US
+Chainalysis,4.2,06-2021,Blockchain,US
+Relativity Space,4.2,06-2021,Aerospace,US
+SSENSE,4.15,06-2021,E-commerce,Canada
+Bitpanda,4.1,08-2021,Cryptocurrency,Austria
+Dataminr,4.1,03-2021,Data analytics,US
+Yello Mobile,4.05,11-2016,Software industry,South Korea
+Branch Metrics,4.0,02-2022,Marketing,US
+BrowserStack,4.0,06-2021,Software,India
+Clubhouse,4.0,04-2021,Messaging,US
+Houzz,4.0,06-2017,Interior design,US
+iCapital Network,4.0,07-2021,Financial services,US
+Megvii,4.0,05-2019,Technology,China
+Melio,4.0,09-2021,Financial technology,Israel
+Next Insurance,4.0,03-2021,Insurance,US
+Olive,4.0,06-2021,Health technology,US
+Patreon,4.0,04-2021,Online membership service,US
+PointClickCare,4.0,01-2021,Software,Canada
+QuintoAndar [pt],4.0,05-2021,Real estate,Brazil
+Niantic,3.95,01-2019,Video games,US
+StockX,3.8,04-2021,E-commerce,US
+Articulate,3.75,07-2021,Educational technology,US
+Cohesity,3.7,03-2021,Software,US
+Noom,3.7,05-2021,Healthcare,US
+Papaya Global,3.7,09-2021,Workforce management,Israel / US
+ShareChat,3.7,12-2021,Social network,India
+VAST Data,3.7,05-2021,Data storage,US
+WHOOP,3.6,08-2021,Wearable technology,US
+Shouqi,3.55,12-2016,Transportation,China
+Alchemy,3.5,10-2021,Blockchain,US
+Coalition,3.5,09-2021,Cybersecurity,US
+Commure,3.5,09-2021,Health technology,US
+Digit Insurance,3.5,07-2021,Insurance,India
+Mirakl,3.5,09-2021,Marketplace,France
+N26,3.5,07-2019,Financial services,Germany
+OwnBackup,3.35,08-2021,Data storage,US
+Preferred Networks,3.33,09-2019,Artificial intelligence,Japan
+CARS24,3.3,12-2021,Marketplace,India
+Kurly,3.3,07-2021,E-commerce,South Korea
+Rubrik,3.3,01-2019,Computer storage,US
+Scopely,3.3,10-2020,Mobile gaming,US
+WeRide,3.3,06-2021,Self-driving cars,China
+Youxia Motors,3.3,10-2018,Electric vehicles,China
+MoonPay,3.4,11-2021,Cryptocurrency,US
+Unacademy,3.4,08-2021,Educational technology,India
+Plus.ai,3.3,05-2021,Self-driving trucks,US
+Starburst Data,3.3,02-2022,Data analytics,US
+Thumbtack,3.2,06-2021,Software,US
+ApplyBoard,3.2,06-2021,Educational technology,Canada
+Blockstream,3.2,08-2021,Blockchain,Canada
+ConsenSys,3.2,11-2021,Blockchain,US
+Cybereason,3.2,07-2021,Cybersecurity,Israel / US
+Eruditus,3.2,08-2021,Educational technology,India
+PsiQuantum,3.15,07-2021,Quantum computing,US
+SpotOn,3.15,09-2021,Financial technology,US
+TiendaNube,3.1,08-2021,E-commerce,Argentina
+SentinelOne,3.1,11-2020,Cybersecurity,US
+Udaan,3.1,01-2021,B2B e-commerce,India
+Wildlife,3.0,08-2020,Mobile gaming,Brazil
+CMR Surgical,3.0,01-2021,Robotics,UK
+Traveloka,3.0,01-2017,Travel,Indonesia
+ActiveCampaign,3.0,04-2021,Marketing,US
+"Age of Learning, Inc.",3.0,06-2021,Education,US
+Automattic,3.0,09-2019,Internet,US
+Calendly,3.0,01-2021,Software,US
+Contentful,3.0,07-2021,Content management system,Germany
+Forter,3.0,05-2021,Software,Israel / US
+Grafana Labs,3.0,08-2021,Software,US
+Groww,3.0,04-2021,Financial technology,India
+Hinge Health,3.0,01-2021,Healthcare,US
+Horizon Robotics,3.0,02-2018,Semiconductors,China
+Lucid Software,3.0,06-2021,Software,US
+MessageBird,3.0,10-2020,Cloud communications,Netherlands
+Pine Labs,5.0,02-2022,Financial technology,India
+Seismic,3.0,08-2021,Software,US
+Sky Mavis,3.0,10-2021,Video games,Vietnam
+Souche,3.0,09-2018,Marketplace,China
+TradingView,3.0,10-2021,Finance,UK
+Upstox,3.0,11-2021,Financial technology,India
+VANCL,3.0,02-2014,E-commerce,China
+Veepee,3.0,08-2022,E-commerce,France
+VIPKID,3.0,06-2018,Education,China
+Warby Parker,3.0,08-2020,Retail,US
+Wefox,3.0,06-2021,Insurance,Germany
+Yixia Technology,3.0,11-2016,Internet media,China
+"New York General Group, Inc.",3.0,09-2022,Superintelligence・Quantum computing・Metaverse,US
+OVO,2.9,03-2019,Financial technology,Indonesia
+Workrise,2.9,05-2021,Workforce management,US
+DriveWealth,2.85,08-2021,Financial technology,US
+BharatPe,2.8,08-2021,Financial technology,India
+Graphcore,2.8,12-2020,Semiconductors,UK
+Icertis,2.8,03-2021,Software,India / US
+OakNorth,2.8,02-2019,Finance,UK
+UnionPay,2.8,10-2016,Finance,China
+Urban Company,2.8,12-2021,Home improvement,India
+Bird,2.78,10-2019,Transportation,US
+Convoy,2.75,11-2019,Trucking,US
+Illumio,2.75,06-2021,Cybersecurity,US
+MasterClass,2.75,05-2021,Educational technology,US
+Zipline,2.75,06-2021,Logistics,US
+Daangn Market,2.7,08-2021,E-commerce,South Korea
+Tridge,2.7,08-2022,Software as a service,South Korea
+Nextiva,2.7,09-2021,Software,US
+Tradeshift,2.7,03-2021,Financial technology,US
+Deliverect,1.4,01-2022,Ordering software for POS,Belgium
+Odoo,2.63,07-2021,CRM,Belgium
+AmWINS Group,2.6,10-2016,Insurance,US
+ManoMano,2.6,07-2021,E-commerce,France
+Pendo,2.6,07-2021,Software,US
+Sourcegraph,2.6,07-2021,Developer platform,US
+Jumpcloud,2.56,09-2021,Software,US
+Cato Networks,2.5,10-2021,Cybersecurity,Israel
+eToro,2.5,12-2020,Financial technology,Israel
+Infra.Market,2.5,08-2021,Marketplace,India
+DriveNets,2.5,08-2022,"Network operating system, Software-defined networking, Software as a service",Israel
+Lenskart,2.5,05-2021,Retail,India
+Monzo,2.5,06-2019,Financial services,UK
+Ualá,2.45,11-2019,Personal finance,Argentina
+HoneyBook,2.4,11-2021,Financial services,Israel / US
+BitSight,2.4,09-2021,Cybersecurity,US
+Exabeam,2.4,06-2021,Cybersecurity,US
+Paxos,2.4,04-2021,Cryptocurrency,US
+Mozido,2.39,10-2014,E-commerce,US
+Wemakeprice,2.33,09-2015,E-commerce,South Korea
+Highspot,2.3,02-2021,Sales,US
+MPL,2.3,09-2021,Mobile gaming,India
+Uptake,2.3,11-2017,Asset performance management,US
+Algolia,2.25,06-2021,Software,France / US
+KeepTruckin,2.25,06-2021,Logistics,US
+Via Transportation,2.25,03-2020,Transportation,US
+Zume,2.25,11-2018,"Food packaging, Logistics",US
+Acorns,2.2,05-2021,Financial technology,US
+Bitso,2.2,05-2021,Cryptocurrency,Mexico
+Gympass,2.2,06-2021,Fitness,Brazil / US
+Transmit Security,2.2,06-2021,Cybersecurity,Israel / US
+Addepar,2.17,06-2021,Financial technology,US
+Eightfold.ai,2.1,06-2021,Artificial intelligence,US
+6sense,2.1,03-2021,Artificial intelligence,US
+C6 Bank [pt],2.1,12-2020,Financial services,Brazil
+Mambu,2.1,01-2021,Financial technology,Germany
+Moveworks,2.1,06-2021,Artificial intelligence,US
+Nextdoor,2.1,05-2019,Social network,US
+Webflow,2.1,01-2021,Web development,US
+bKash,2.0,11-2021,Mobile financial services,Bangladesh
+Babylon Health,2.0,08-2019,Healthcare,UK
+Bought By Many,2.0,06-2021,Insurance,UK
+FlixMobility,2.0,08-2019,Transportation,Germany
+Tipalti,2.0,10-2020,Financial technology,US / Israel
+XtalPi,2.0,08-2021,Pharmaceuticals,China
+Hive,2.0,04-2021,Artificial intelligence,US
+Mural,2.0,07-2021,Technology,Argentina / US
+Aiven,2.0,10-2021,Data infrastructure,Finland
+AppsFlyer,2.0,11-2020,Mobile marketing analytics,Israel / US
+Beijing Weiying Technology,2.0,04-2016,"E-commerce, movie ticket distributor",China
+BlaBlaCar,2.0,04-2021,Transportation,France
+Calm,2.0,12-2020,Digital health,US
+Clearco,2.0,04-2021,Financial services,Canada
+ClickHouse,2.0,10-2021,Database management,US
+Clip,2.0,06-2021,Financial technology,Mexico
+Cockroach Labs,2.0,01-2021,Database management,US
+Divvy Homes,2.0,08-2021,Real estate technology,US
+Druva,2.0,04-2021,Cloud computing,India / US
+Exotec,2.0,08-2022,Robotics,France
+Firstp2p,2.0,09-2016,Financial services,China
+Formlabs,2.0,05-2021,3D printing,US
+Huimin.cn,2.0,09-2016,B2B e-commerce,China
+Iterable,2.0,06-2021,Marketing,US
+Kry,2.0,04-2021,Healthcare,Sweden
+Meicai.cn,2.0,06-2016,"Agriculture, E-commerce",China
+Mynt,2.0,11-2021,Financial technology,Philippines
+OPay,2.0,08-2021,Financial technology,Nigeria
+Oxford Nanopore Technologies,2.0,11-2012,Nanopore sequencing,UK
+Sword Health,2.0,11-2021,Health,Portugal / US [59]
+Taopiaopiao,2.0,07-2017,"E-commerce, movie ticket distributor",China
+Trendy International Group,2.0,02-2012,"Fashion, Retail",China / Hong Kong
+Unqork,2.0,10-2020,Software development,US
+Zerodha,2.0,05-2021,Financial technology,India
+Zilch,2.0,11-2021,Financial technology,UK
+Akulaku,2.0,02-2022,Financial technology,Indonesia
+Ankorstore,1.98,08-2022,Marketplace,France
+Avant,1.98,09-2015,Consumer finance,US
+Intarcia Therapeutics,1.95,09-2016,Pharmaceutical,US
+ThoughtSpot,1.95,08-2019,Analytics,US
+Yinlong Group,1.95,12-2016,Energy,China
+Sanpower Group,1.93,03-2018,Holding company,China
+ZigBang,1.93,06-2022,Property technology,South Korea
+Bunq,1.9,07-2021,Financial services,Netherlands
+CoinSwitch Kuber,1.9,10-2021,Cryptocurrency,India
+Dfinity,1.9,08-2018,Cloud computing,Switzerland
+Prosper Marketplace,1.9,08-2015,Financial technology,US
+Musinsa,1.89,11-2019,Fashion,South Korea
+Apus Group,1.85,08-2017,Mobile internet,China
+BenevolentAI,1.85,08-2015,Drug discovery,UK
+MEGAZONE,1.83,08-2022,Cloud computing,South Korea
+BillDesk,1.8,11-2018,Financial technology,India
+Landa Digital Printing,1.8,06-2018,Printing,Israel
+Lightricks,1.8,09-2021,Software development,Israel
+NantOmics,1.8,06-2015,Biotechnology,US
+Orca Security,1.8,10-2021,Cybersecurity,Israel
+Quora,1.8,04-2017,Social network,US
+Zocdoc,1.8,08-2015,Healthcare,US
+L&P Cosmetic,1.78,03-2018,Cosmetics,South Korea
+Creditas [pt],1.75,12-2020,Financial services,Brazil
+Spinny,1.75,11-2021,Marketplace,India
+Trulioo,1.75,06-2021,Identity management,Canada
+AlphaSense,1.7,06-2022,Software,US
+Dragos,1.7,10-2021,Cybersecurity,US
+dutchie,1.7,03-2021,Cannabis,US
+Harness,1.7,06-2021,Software,US
+PAX Labs,1.7,04-2019,Cannabis,US
+Taihe Music Group,1.7,06-2018,Financial technology,China
+Vestiaire Collective,1.7,09-2021,Marketplace,France
+Voodoo,1.7,08-2022,Gaming,France
+VTEX [pt],1.7,09-2020,Technology,Brazil
+Wave,1.7,09-2021,Financial technology,Senegal / US
+Workato,1.7,12-2020,Technology,US
+Alan,1.68,04-2021,Health technology,France
+GoStudent,1.67,06-2021,Educational technology,Austria
+Hibob,1.65,10-2021,HR technology,Israel / US
+Solarisbank,1.65,07-2021,Financial technology,Germany
+Wayflyer,1.6,02-2022,Financial technology,Ireland
+Afiniti,1.6,05-2017,Software development,US
+Aiways,1.6,04-2018,Electric vehicles,China
+Caocao Zhuanche,1.6,01-2018,Financial technology,China
+Clari,1.6,03-2021,Software,US
+Clio,1.6,04-2021,Legal technology,Canada
+Cognite,1.6,05-2021,Software,Norway
+HomeLight,1.6,09-2021,Real estate,US
+Infinidat,1.6,10-2017,Data storage,Israel / US
+Judo Bank,1.6,12-2020,Financial services,Australia
+Nord Security,1.6,04-2022,VPN service,Lithuania
+SafetyCulture,1.6,05-2021,Technology,Australia
+SmartHR,1.6,05-2021,HR technology,Japan
+Unite Us,1.6,03-2021,Healthcare,US
+CureFit,1.56,11-2021,Financial technology,India
+HeartFlow,1.5,02-2018,Financial technology,US
+Aihuishou,1.5,01-2018,Financial technology,China
+Andela,1.5,09-2021,Education,Nigeria / US
+Culture Amp,1.5,07-2021,Software,Australia
+Devo Inc,1.5,10-2021,Software,Spain
+Gett,1.5,05-2019,Transportation,Israel
+ID.me,1.5,03-2021,Identity verification service,US
+Ledger,1.5,06-2021,Cryptocurrency,France
+Matillion,1.5,09-2021,Data analytics,UK
+MOLOCO,1.5,08-2021,Advertising technology,US
+Mu Sigma,1.5,02-2013,Management consulting,India / US
+NextSilicon,1.5,06-2021,Semiconductors,Israel
+NotCo,1.5,07-2021,Food technology,Chile
+Podium,1.5,08-2019,Software,US
+Remote,1.5,07-2021,Software,US[59]
+Spring Rain Software,1.5,06-2016,Financial technology,China
+Starling Bank,1.5,03-2021,Financial technology,UK
+Tujia.com,1.5,10-2017,Financial technology,China
+ZBJ.com,1.5,06-2015,Financial technology,China
+Ascend Money,1.5,09-2021,Financial technology,Thailand
+Hellobike,1.47,06-2018,Financial technology,China
+Suning Sports,1.47,07-2018,Holding company,China
+Koudai Gouwu,1.45,10-2014,Financial technology,China
+M1 Finance,1.45,07-2021,Financial technology,US
+Zeta,1.45,05-2021,Financial technology,India
+Away,1.4,05-2019,Retail,US
+Bucketplace,1.4,05-2022,Interior design,South Korea
+Cabify,1.4,01-2018,Transportation,Spain
+Chargebee,1.4,04-2021,Financial technology,India / US
+Epidemic Sound,1.4,03-2021,Music,Sweden
+FiscalNote,1.4,05-2021,Data analytics,US
+Five Star Finance,1.4,03-2021,Financial services,India
+Gupshup,1.4,04-2021,Messaging,India / US
+IAD,1.4,10-2021,Real estate,France
+NetDocuments,1.4,05-2021,Software,US
+"Panther Labs, Inc.",1.4,12-2021,Computer security,US
+Pristyn Care,1.4,12-2021,Health technology,India
+"QOMPLX, Inc.",1.4,03-2021,Computer security,US
+Rebel Foods,1.4,10-2021,Ghost kitchen,India
+Stash,1.4,02-2021,Financial technology,US
+Symphony,1.4,06-2019,Software,US
+Voyager,1.4,04-2022,Financial technology,Philippines
+Yotpo,1.4,03-2021,Marketing,Israel / US
+RIDI,1.33,08-2021,E-commerce,South Korea
+Zetwerk,1.33,08-2021,Financial technology,India
+GPClub,1.32,12-2018,Financial technology,South Korea
+DistroKid,1.3,08-2021,Music,US
+ETCP,1.3,10-2016,Financial technology,China
+Feedzai,1.3,03-2021,Artificial intelligence,Portugal / US
+G2,1.3,06-2021,Technology,US
+Innovaccer,1.3,02-2021,Health care,India / US
+Knotel,1.3,08-2019,Financial technology,US
+Konfio,1.3,09-2021,Financial services,Mexico
+Kr Space,1.3,06-2018,Financial technology,China
+Yugabyte,1.3,10-2021,Database management,US
+Incode,1.25,12-2021,Technology,Mexico
+Applied Intuition,1.25,10-2020,Software,US
+BigID,1.25,05-2018,Cybersecurity,Israel / US
+Deel,1.25,04-2021,Financial technology,Israel / US
+ezCater,1.25,04-2019,Financial technology,US
+Iwjw,1.25,11-2015,Financial technology,China
+Marshmallow,1.25,09-2021,Insurance,UK
+Rec Room,1.25,03-2021,Video games,US
+Nexii,1.23,09-2021,Building services engineering,Canada
+Spiber,1.22,09-2021,Biotechnology,Japan
+Mamaearth,1.2,01-2022,Personal care,India
+Merama,1.2,12-2021,E-commerce,Mexico
+Jokr,1.2,06-2021,Transportation,USA
+Ada,1.2,05-2021,Software,Canada
+Alation,1.2,06-2021,Software,US
+Apotea,1.2,04-2021,E-commerce,Sweden
+Axonius,1.2,03-2021,Cybersecurity,Israel / US
+Byton,1.2,06-2018,Automotive,China
+CarDekho,1.2,10-2021,Marketplace,India
+Copado,1.2,09-2021,Software,Spain / US
+Dada,1.2,08-2018,Financial technology,China
+Dental Monitoring,1.2,10-2021,Healthcare,France
+Deutsche Health,1.2,08-2020,Financial technology,Germany / Russia
+Droom,1.2,07-2021,Marketplace,India
+Fair,1.2,12-2018,Financial technology,US
+FirstCry,1.2,02-2020,E-commerce,India
+FloQast,1.2,07-2021,Software,US
+Forto,1.2,06-2021,Software,Germany
+Glossier,1.2,03-2019,Financial technology,US
+Intercom,1.2,03-2018,Software,US
+Kyriba,1.2,10-2021,Cloud software,France
+MindTickle,1.2,08-2021,Software as a service,India
+MyGlamm,1.2,11-2021,E-commerce,India
+Rohlik,1.2,06-2021,Retail,Czech Republic
+upGrad,1.2,08-2021,Educational technology,India
+Workhuman,1.2,06-2020,Software,Ireland
+Sysdig,1.18,04-2021,Cybersecurity,US
+Acko,1.1,10-2021,Insurance,India
+Apna,1.1,09-2021,Financial technology,India
+Carousell,1.1,09-2021,Marketplace,Singapore
+CoinDCX,1.1,08-2021,Cryptocurrency,India
+Purplle,1.1,06-2022,E-Commerce,India
+GlobalBees,1.1,12-2021,Financial technology,India
+Luoji Siwei,1.1,09-2017,Financial technology,China
+Nexthink,1.1,02-2021,Technology,Switzerland
+Sisense,1.1,01-2020,Business intelligence,Israel / US
+SmartNews,1.1,08-2019,Financial technology,Japan
+Trax,1.1,05-2019,Financial technology,Singapore / Israel
+Virta Health,1.1,12-2020,Healthcare,US
+Benevity,1.1,12-2020,Software as a service,Canada
+Zego,1.1,03-2021,Insurance,UK
+Instabase,1.05,10-2019,Software,US
+Rivigo,1.05,10-2019,Logistics,India
+Aprogen,1.04,12-2019,Financial technology,South Korea
+Pentera,1.0,01-2022,Cybersecurity,Israel
+Emplifi,1.0,03-2022,Technology,"US, UK and Europe"
+Gymshark,1.0,08-2020,Sportswear,UK
+Kopi Kenangan,1.0,12-2021,Coffee shop,Indonesia
+Clara,1.0,12-2021,Financial technology,Mexico
+58 Daojia,1.0,10-2015,Financial technology,China
+Acronis,1.0,09-2019,Software,Singapore / Switzerland
+Aircall,1.0,10-2021,Cloud,France
+Ajaib,1.0,10-2021,Financial technology,Indonesia
+Amber Group,1.0,06-2021,Cryptocurrency,Hong Kong
+AppDirect,1.0,10-2015,Financial technology,US
+Aqua Security,1.0,03-2021,Cloud computing,Israel
+Asia First Media,1.0,09-2019,Media,Japan
+Assent Compliance,1.0,01-2022,Supply chain management,Canada
+Beibei,1.0,06-2016,E-commerce,China
+Blackbuck,1.0,07-2021,Logistics,India
+Back market,1.0,10-2021,E-commerce,France
+Bluecore,1.0,08-2021,E-commerce,US
+Bringg,1.0,06-2021,Logistics,Israel
+"Cadence Solutions, Inc.",1.0,12-2021,Healthcare,US
+Calabrio,1.0,03-2021,Software,US
+Carro,1.0,06-2021,Marketplace,Singapore
+Carsome,1.0,07-2021,Marketplace,Malaysia
+Chubao Technology,1.0,05-2017,Financial technology,China
+Dream Games,1.0,06-2021,Video games,Turkey
+Dt Dream,1.0,06-2017,Financial technology,China
+Dunamu,1.0,07-2021,Financial technology,South Korea
+DXY,1.0,04-2018,Financial technology,China
+Earnix,1.0,02-2021,Financial technology,Israel
+Ebanx,1.0,10-2019,Financial services,Brazil
+EMPG,1.0,06-2020,Real estate technology,UAE
+eSentire,1.0,02-2022,Cybersecurity,Canada / USA
+Flash Express,1.0,06-2021,Logistics,Thailand
+Flexe,1.0,07-2022,Logistics,US
+Flutterwave,1.0,03-2021,Financial technology,Nigeria / US
+Fractal,1.0,01-2022,Artificial intelligence,India/ US
+FreshBooks,1.0,08-2021,Accounting software,Canada
+Frontline Education,1.0,09-2017,Financial technology,US
+FXiaoKe,1.0,01-2018,Financial technology,China
+Gelato,1.0,08-2021,Financial technology,Norway
+GeoComply,1.0,03-2021,Cybersecurity,Canada
+GetYourGuide,1.0,05-2019,Travel,Germany
+Glance,1.0,12-2020,Artificial intelligence,India
+Go1,1.0,07-2021,Education,Australia
+GoGoVan,1.0,09-2017,Technology,Hong Kong
+Gorillas,1.0,03-2021,Retail,Germany
+Gousto,1.0,11-2020,Meal kit,UK
+Blinkit,1.0,06-2021,Retail,India
+Grover,1.0,04-2022,E-commerce,Germany
+Grove Collaborative,1.0,09-2019,Financial technology,US
+Hailo,1.0,06-2021,Electronics,Israel
+HighRadius,1.0,01-2020,Software as a service,India / US
+Huikedu Group,1.0,05-2018,Financial technology,China
+iCarbonX,1.0,07-2016,Healthcare,China
+IFood,1.0,11-2018,Food delivery,Brazil
+IGAWorks,1.0,08-2021,Advertising technology,South Korea
+Improbable,1.0,05-2017,Cloud computing,UK
+Infobip,1.0,07-2020,Cloud communications,Croatia / UK
+Injective,1.0,04-2021,Financial technology,US
+InMobi,1.0,05-2017,Internet,India
+InVision,1.0,11-2017,Financial technology,US
+Ivalua,1.0,05-2020,Financial technology,France
+Jollychic,1.0,05-2018,Financial technology,China
+JoyTunes,1.0,06-2021,Music,Israel
+Kitopi,1.0,07-2021,Ghost kitchen,UAE
+Klook,1.0,04-2019,Financial technology,Hong Kong
+Lamabang,1.0,02-2017,Financial technology,China
+LetsGetChecked,1.0,06-2021,Healthcare,Ireland
+Licious,1.0,10-2021,Retail,India
+Lydia,1.0,08-2022,Finance,France
+Lilium GmbH,1.0,06-2020,Transportation,Germany
+LinkSure Network (WiFi Master Key),1.0,01-2015,Financial technology,China
+Liquid Group,1.0,04-2019,Cryptocurrency,Japan
+LMAX Group,1.0,07-2021,Financial technology,UK
+Locus Robotics,1.0,02-2021,Robotics,US
+Loft Brazil Technology [pt],1.0,01-2020,Real estate,Brazil
+Lunar,1.0,07-2021,Financial technology,Denmark
+Loggi [pt],1.0,06-2019,Logistics,Brazil
+Tiket.com,1.0,12-2021,Travel,Indonesia
+Lookout,1.0,08-2014,Cybersecurity,US
+MadeiraMadeira [pt],1.0,01-2021,Furniture,Brazil
+Maimai,1.0,08-2018,Financial technology,China
+Matrixport,1.0,08-2021,Cryptocurrency,Singapore
+Meero,1.0,06-2019,Internet,France
+Mensa Brands,1.0,11-2021,E-commerce,India
+Mia.com,1.0,10-2016,Financial technology,China
+MindMaze,1.0,02-2016,Financial technology,Switzerland
+MobiKwik,1.0,10-2021,Financial technology,India
+MobileCoin,1.0,08-2021,Cryptocurrency,US
+Mobvoi,1.0,10-2015,Artificial intelligence,China
+Mofang Apartment,1.0,04-2016,Financial technology,China
+Moglix,1.0,05-2021,E-commerce,India / Singapore
+Moka,1.0,11-2021,Human resource management,China
+Morning Consult,1.0,06-2021,Financial technology,US
+Ninja Van,1.0,09-2021,Logistics,Singapore
+Nium,1.0,07-2021,Financial technology,Singapore
+NoBroker,1.0,11-2021,Financial technology,India
+Numbrs,1.0,08-2019,Financial technology,Switzerland
+Kredivo,1.0,01-2022,Financial technology,Indonesia
+OCSiAl,1.0,03-2019,Nanotechnology,Luxembourg
+Opn (Synqa),1.0,05-2022,Financial technology,Japan
+OrCam,1.0,02-2018,Health,Israel
+PandaDoc,1.0,09-2021,Software as a service,US
+Pantheon Systems,1.0,07-2021,WebOps,US
+PatSnap,1.0,03-2021,Intellectual property,Singapore
+Perimeter 81,1.0,06-2022,Network security,Israel
+Picsart,1.0,08-2021,Graphic design,Armenia / US
+Pipedrive,1.0,11-2020,CRM,Estonia / US
+Playco,1.0,09-2020,Mobile gaming,Japan
+Printful,1.0,05-2021,Technology,Latvia
+Redis Labs,1.0,08-2020,Software,Israel / US
+REEF Technology,1.0,11-2020,Real estate technology,US
+Quizlet,1.0,05-2020,Educational technology,US
+Revolution Precrafted,1.0,10-2017,Architecture,Philippines
+Rubicon Global,1.0,09-2017,Waste management,US
+Sennder,1.0,01-2021,Logistics,Germany
+Shift Technology,1.0,05-2021,Artificial intelligence,France
+Shippo,1.0,06-2021,Financial technology,US
+Sift,1.0,04-2021,Fraud prevention,US
+Slice,1.0,11-2021,Financial technology,India
+SmartAsset,1.0,06-2021,Financial technology,US
+SmartMore,1.0,06-2021,Artificial intelligence,China
+Snapdeal,1.0,05-2017,E-commerce,India
+Socar,1.0,10-2020,Car sharing,South Korea
+SoundHound,1.0,05-2018,Financial technology,US
+Spendesk,1.0,08-2022,Financial software,France
+Splashtop,1.0,01-2021,Software,US
+Staffbase,1.1,03-2022,Software as a service,Germany
+Swile,1.0,10-2021,Financial services,France
+Tekion,1.0,10-2020,Software as a service,US
+Tenstorrent,1.0,05-2021,Semiconductors,Canada
+Tezign,1.0,10-2021,Software,China
+Tongdun Technology,1.0,10-2017,Financial technology,China
+Tractable,1.0,06-2021,Artificial intelligence,UK
+Tresata,1.0,10-2018,Financial technology,US
+TrueLayer,1.0,09-2021,Financial technology,UK
+Trustly,1.0,06-2020,Financial technology,Sweden
+Turo,1.0,07-2019,Car sharing,US
+Udacity,1.0,11-2015,Education,US
+Unisound,1.0,07-2018,Technology,China
+Vedantu,1.0,09-2021,Educational technology,India
+Blibli,1.0,12-2021,E-commerce,Indonesia
+Verbit,1.0,06-2021,Software,Israel
+VerSe Innovation,1.0,12-2020,Technology,India
+Visier,1.0,06-2021,Technology,Canada
+volocopter,1.0,03-2021,Transportation,Germany
+Vox Media,1.0,08-2015,Digital media,US
+VTS,1.0,05-2019,Financial technology,US
+Wacai.com,1.0,07-2018,Financial technology,China
+WeLab,1.0,12-2019,Financial technology,Hong Kong
+Womai,1.0,10-2015,Financial technology,China
+Xendit,1.0,09-2021,Financial technology,Indonesia
+Xiaozhu.com,1.0,11-2017,Financial technology,China
+YH Global,1.0,09-2017,Telecommunications,China
+Yidian Zixun,1.0,10-2017,Financial technology,China
+Yitu Technology,1.0,07-2018,Financial technology,China
+YunQuNa,1.0,05-2021,Logistics,China
+Zenoti,1.0,12-2020,Software company,India / US
+Zhaogang.com,1.0,07-2017,Financial technology,China
+Zhuanzhuan,1.0,04-2017,Financial technology,China
+Zuoyebang,1.0,07-2018,Financial technology,China
+LINE MAN Wongnai,1.0,09-2022,"E-commerce, Food delivery",Thailand
+ReliaQuest,1.0,12-2021,Cybersecurity,US
+DANA,1.0,09-2022,Financial technology,Indonesia
+Deezer,1.0,08-2022,Music,France
+Ecovadis,1.0,08-2022,"Environmental,_social,_and_corporate_governance",France
+Scandit,1.0,02-2022,Software,Switzerland
+BlueVoyant,1.0,02-2022,Cybersecurity,US
+Payhawk,1.0,03-2022,Financial technology,Bulgaria
+Einride,1.44,04-2022,Technology,Sweden
+Voi,1.0,04-2022,Financial technology,Sweden
+Neo Financial,1.0,05-2022,Financial technology,Canada
+Physics Wallah,1.1,06-2022,Educational technology,India
+OneCard,1.4,07-2022,Financial technology,India
+5ire,1.5,07-2022,Technology,India
