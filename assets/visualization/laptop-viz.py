@@ -30,9 +30,7 @@ laptop = get_data()
 st.title("Real-Time / Live Data Laptop Dashboard")
 
 st.markdown('''
-        * _The sample data used in this application is property of Oxford Economics and provided for personal use and educational purposes only._
-        * _A 5yr rolling mean transformation has been applied to the original data series values and so is still representative of actual level values._
-        * _Please do not redistribute this data without the expresspermission of the owner, Oxford Economics._
+        This dataset represents various models of laptops from various brands with features such as brand, processor_brand, processor_name, ram_gb, ram_type, SSD, HDD, os, os_bit, graphic_card_gb, weight, warranty, touch screen, MSOffice, price, rating, Number of Ratings, Number of Reviews. Here, price is an independent variable so this dataset can be used for regression analysis to predict the prices of laptops based on their features.
     ''')
 
 
