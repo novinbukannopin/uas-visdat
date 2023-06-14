@@ -3,7 +3,7 @@ import time  #
 # import matplotlib.pyplot as plt
 import numpy as np  # import np
 import pandas as pd  # import pd
-import plotly.express as px  # import chart
+# import plotly.express as px  # import chart
 import streamlit as st
 import seaborn as sns
 
