@@ -67,10 +67,18 @@ def kpi(subheader, label, option_columns, method):
 
 kpi_count, kpi_mean, kpi_range = st.columns(3)
 with kpi_count:
-    kpi(subheader=":department_store: This is a Count Item", label="count", option_columns="all", method="counts")
+    kpi(
+        subheader=":department_store: This is a Count Item",
+        label="count",
+        option_columns="all",
+        method="counts")
 
 with kpi_mean:
-    kpi(subheader=":snowman: This is Mean", label="mean", option_columns=(['price', 'rating']), method="mean")
+    kpi(
+        subheader=":snowman: This is Mean",
+        label="mean",
+        option_columns=(['price', 'rating']),
+        method="mean")
 
 with kpi_range:
     kpi(subheader=":snowman: This is Range", label="range", option_columns=(['price', 'rating']), method="range")
