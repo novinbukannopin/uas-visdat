@@ -220,7 +220,7 @@ st.header("Distribution Manufacturer Ram by Brand")
 column_count_plot = st.selectbox("Choose a column to plot count. Try Selecting Brand ",laptop['brand'].unique())
 ram_pie_1, ram_pie_2 = st.columns([6,6])
 with ram_pie_1:
-    fig = px.pie(laptop.loc[(laptop['brand'] == column_count_plot)], values='ram_gb',labels='ram_gb', names='ram_gb', color="ram_gb", title="Distribution of Ram Size Usage by Brand")
+    fig = px.pie(laptop.loc[(laptop['brand'] == column_count_plot)], values='ram_gb',labels='ram_gb', names='ram_gb', color="ram_gb", title=f"Distribution of Ram Size Usage by Brand {column_count_plot}")
     st.plotly_chart(fig, use_container_width=True)
 
 with ram_pie_2:
@@ -235,7 +235,7 @@ with ram_pie_2:
         y='Count',
         text='Count',
         color='Ram',
-        title="Distribution of Ram Type Usage by Brand")
+        title=f"Distribution of Ram Type Usage by Brand {column_count_plot}")
 
     fig.update_layout(
         xaxis_title=column_count_plot,
