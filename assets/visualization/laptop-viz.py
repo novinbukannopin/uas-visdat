@@ -14,7 +14,6 @@ from PIL import Image
 import seaborn as sns
 from pandas import DataFrame
 
-
 st.set_page_config(
     page_title="Real-Time Data Laptop Pricing",
     page_icon="✅",
