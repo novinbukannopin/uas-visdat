@@ -73,7 +73,7 @@ with kpi_count:
 
 with kpi_mean:
     kpi(
-        subheader=":snowman: This is Mean",
+        subheader=":snowman: This is Average",
         label="mean",
         option_columns=(['price', 'rating']),
         method="mean")
@@ -88,82 +88,86 @@ with kpi_range:
 
 st.markdown("<hr/>",unsafe_allow_html=True)
 
-st.markdown("## Plotting")
+st.markdown("## Visualization Data")
 st.write("")
 
 cccount, col2 = st.columns(2)
-with cccount:
-        st.subheader("Count Plot")
-        column_count_plot = st.selectbox("Choose a column to plot count. Try Selecting Brand ",laptop.columns)
+# with cccount:
+colname = ""
+st.subheader("Comparison of amounts ")
+column_count_plot = st.selectbox("Choose a column to plot count. Try Selecting Brand ",laptop.columns)
+colname = column_count_plot
+value_counts = laptop[column_count_plot].value_counts().reset_index()
+value_counts.columns = ['Data', 'Count']
 
-        value_counts = laptop[column_count_plot].value_counts().reset_index()
-        value_counts.columns = ['Data', 'Count']
+fig = px.bar(
+    value_counts,
+    x='Data',
+    y='Count',
+    text='Count',
+    color='Data',
+    title="Bar Chart")
 
-        fig = px.bar(
-            value_counts,
-            x='Data',
-            y='Count',
-            text='Count',
-            color='Data',
-            title="Count Bar Chart")
-
-        fig.update_layout(
-            xaxis_title=column_count_plot,
-            yaxis_title="Count of " + column_count_plot)
-
-        st.plotly_chart(fig, use_container_width=True)
-
-with col2:
-        st.subheader('Histogram')
-        option_columns = ["warranty", "msoffice", "os", "windows", "weight", "touchscreen"]
-        option_columns_num = [
-            "brand", "processor_brand",
-            "processor_name", "processor_gnrtn",
-            "ram_type", "ram_gb",
-            'ssd', 'hdd']
-
-        choice_categorical = st.selectbox("Optional categorical variables (countplot hue). Try Selecting Body Mass", options=option_columns)
-
-        choice_categorical_num = st.selectbox("Optional numerical variables (countplot hue). Try Selecting Body Mass", options=option_columns_num)
-
-        value_counts = laptop[choice_categorical_num]\
-            .groupby(laptop[choice_categorical])\
-            .value_counts()\
-            .reset_index()
-
-        value_counts.columns = ['Data', choice_categorical_num, 'Count']
-
-        fig = px.histogram(
-            value_counts,
-            x="Data",
-            y="Count",
-            color=choice_categorical_num,
-            title="Histogram of " +choice_categorical)
-
-        st.plotly_chart(fig, use_container_width=True)
-
-
-st.markdown("## Pricing")
-st.write("")
-import streamlit as st
-
-values = st.slider(
-    'Select a range of qty',
-    0, 823, (25, 75))
-min , max = values
-# groupped = laptop.groupby(['brand', 'processor_brand', 'ram_gb']).size().reset_index(name="count")
-# st.table(groupped)
-option_columns_num = [
-    "brand", "processor_brand", "processor_name", "processor_gnrtn", "ram_type", "ram_gb", 'ssd', 'hdd',"warranty", "msoffice", "os", "windows", "weight", "touchscreen"]
-
-choice_categorical_num = st.selectbox("Optional numerical variables (countplot hue). Try Selecting brand", options=option_columns_num)
-
-fig = px.line(
-    laptop[min:max],
-    x="brand",
-    y="price",
-    color=choice_categorical_num,
-    markers=True)
+fig.update_layout(
+    xaxis_title=column_count_plot,
+    yaxis_title="Count of " + column_count_plot)
 
 st.plotly_chart(fig, use_container_width=True)
+
+# with col2:
+st.subheader('Distribution Data')
+option_columns = ["warranty", "msoffice", "os", "windows", "weight", "touchscreen"]
+option_columns_num = [
+    "brand", "processor_brand",
+    "processor_name", "processor_gnrtn",
+    "ram_type", "ram_gb",
+    'ssd', 'hdd']
+
+choice_categorical = st.selectbox("Choose the enabled variable used for the x-axis. Try Selecting Warranty", options=option_columns)
+
+choice_categorical_num = st.selectbox("Choose the enabled variable used for the legend. Try Selecting Brand", options=option_columns_num)
+
+value_counts = laptop[choice_categorical_num]\
+    .groupby(laptop[choice_categorical])\
+    .value_counts()\
+    .reset_index()
+
+value_counts.columns = ['Data', choice_categorical_num, 'Count']
+
+fig = px.histogram(
+    value_counts,
+    x="Data",
+    y="Count",
+    color=choice_categorical_num,
+    title="Histogram of " +choice_categorical)
+
+st.plotly_chart(fig, use_container_width=True)
+
+# 10 laptop termahal
+rich_laptop = laptop.sort_values('price', ascending=False, ignore_index=True)
+
+ten_laptop = rich_laptop.head(10)
+
+
+fig = px.scatter(
+    data_frame=ten_laptop, x=ten_laptop['brand'], y=ten_laptop['price'], title="10 Laptop yang Expensive", color=ten_laptop['brand'], hover_data=ten_laptop, symbol=ten_laptop['brand']
+)
+st.plotly_chart(fig, use_container_width=True)
+
+# 10 laptop termurah
+rich_laptop = laptop.sort_values('price', ascending=False, ignore_index=True)
+
+ten_laptop_murah = rich_laptop.tail(10)
+
+
+fig = px.scatter(
+    data_frame=ten_laptop_murah, x=ten_laptop_murah['brand'], y=ten_laptop_murah['price'], title="10 Laptop yang Cheap", color=ten_laptop_murah['brand'], hover_data=ten_laptop_murah, symbol=ten_laptop_murah['brand']
+)
+st.plotly_chart(fig, use_container_width=True)
+
+# rating
+laptop["total_rating"] = laptop['rating'] * laptop["no_ratings"]
+best_rating = laptop.sort_values('total_rating', ascending=False, ignore_index=True)
+best_rating_filtered = best_rating[best_rating['rating'] == 5]
+st.table(best_rating_filtered.head(10))
 
