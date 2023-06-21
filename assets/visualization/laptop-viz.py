@@ -186,9 +186,9 @@ st.subheader("Best Rating Laptop 2022")
 
 rating_col_1, rating_col_2 = st.columns([3,9])
 with rating_col_1:
-    image = Image.open("../images/laptop-1.jpg")
+    # image = Image.open("../images/laptop-1.jpg")
     st.write("\n")
-    st.image(image)
+    # st.image(image)
     st.write("Insert amount")
     color = st.select_slider(
         'Atur jumlah data yang akan ditampilkan',
