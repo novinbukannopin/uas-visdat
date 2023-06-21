@@ -141,6 +141,7 @@ fig = px.histogram(
 
 st.plotly_chart(fig, use_container_width=True)
 
+# PRICEY
 def scatter_price_laptop(count, title, asc):
     price_by_laptop = laptop.sort_values('price', ascending=False, ignore_index=True)
     if(asc == "asc"):
@@ -172,16 +173,8 @@ with price_one:
 with price_two:
     scatter_price_laptop(10, "Top 10 Cheap Laptop", asc="desc")
 
+# RATINGS
 
-# rating
-df = px.data.medals_long()
-
-fig = px.scatter(df, y="nation", x="count", color="medal", symbol="medal", title="Rating")
-fig.update_traces(marker_size=10)
-# st.plotly_chart(fig, use_container_width=True)
-
-# rating
-#
 st.subheader("Best Rating Laptop 2022")
 
 rating_col_1, rating_col_2 = st.columns([3,9])
@@ -193,9 +186,10 @@ with rating_col_1:
     color = st.select_slider(
         'Atur jumlah data yang akan ditampilkan',
         options=[5, 10, 15, 20, 25, 30, 40, 50], key="rating_1")
-    st.subheader(f"Best {color} \n Laptop Ratings")
+    st.write(f"Best {color} \n Laptop Ratings")
 with rating_col_2:
     rating_5, rating_4, rating_3, rating_2, rating_1 = st.tabs(["Rating :five:", "Rating :four:", "Rating :three:", "Rating :two:", "Rating :one:"])
+
 
 def dot_plots_rating_laptop(rating, bestnum):
     rating_filtered = laptop.loc[(laptop['rating']==rating)]
@@ -221,4 +215,35 @@ with rating_1:
     dot_plots_rating_laptop(rating=1, bestnum=color)
 
 
-#
+st.header("Distribution Manufacturer Ram by Brand")
+# RAM SIZE ORDER
+column_count_plot = st.selectbox("Choose a column to plot count. Try Selecting Brand ",laptop['brand'].unique())
+ram_pie_1, ram_pie_2 = st.columns([6,6])
+with ram_pie_1:
+    fig = px.pie(laptop.loc[(laptop['brand'] == column_count_plot)], values='ram_gb',labels='ram_gb', names='ram_gb', color="ram_gb", title="Distribution of Ram Size Usage by Brand")
+    st.plotly_chart(fig, use_container_width=True)
+
+with ram_pie_2:
+    ram_type_counts = laptop.groupby('brand')['ram_type'].value_counts()
+    value_counts =laptop[laptop['brand'] == column_count_plot]['ram_type'].value_counts().reset_index()
+
+    value_counts.columns = ['Ram', 'Count']
+
+    fig = px.bar(
+        value_counts,
+        x='Ram',
+        y='Count',
+        text='Count',
+        color='Ram',
+        title="Distribution of Ram Type Usage by Brand")
+
+    fig.update_layout(
+        xaxis_title=column_count_plot,
+        yaxis_title="Count of " + column_count_plot)
+
+    st.plotly_chart(fig, use_container_width=True)
+
+
+
+
+
