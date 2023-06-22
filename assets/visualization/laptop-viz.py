@@ -21,6 +21,10 @@ st.set_page_config(
 )
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
+# st.markdown(f"<html style='scroll-behavior: smooth;'></html>", unsafe_allow_html=True)
+with open('style.css')as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+
 dataset_url = "https://raw.githubusercontent.com/novinbukannopin/uas-visdat/main/assets/clean/laptop-price.csv"
 
 @st.cache_data
@@ -35,8 +39,31 @@ st.markdown('''
         This dataset represents various models of laptops from various brands with features such as brand, processor_brand, processor_name, ram_gb, ram_type, SSD, HDD, os, os_bit, graphic_card_gb, weight, warranty, touch screen, MSOffice, price, rating, Number of Ratings, Number of Reviews. Here, price is an independent variable so this dataset can be used for regression analysis to predict the prices of laptops based on their features.
     ''')
 
+st.sidebar.markdown('''
+# Sections
+- [Descriptive Statistic](#descriptive-statistic)
+- [Metric](#metric)
+''', unsafe_allow_html=True)
 
-st.markdown("## Descriptive Statistic")
+st.header("METRIC")
+
+jumlah_brand = len(laptop['brand'].unique())
+processor_name = len(laptop['processor_name'].unique())
+processor_brand = len(laptop['processor_brand'].unique())
+ram_type = len(laptop['ram_type'].unique())
+total_product = len(laptop['brand'])
+
+col1, col2, col3, col4, col5 = st.columns(5)
+col1.metric("Total Product", f"{str(total_product)} Product", "20%")
+col2.metric("Brand Laptop", f"{str(jumlah_brand)} Brand", "-8%")
+col3.metric("Processor", f"{str(processor_name)} Type", "15%")
+col4.metric("Brand Procie", f"{str(processor_brand)} Brand", "5%")
+col5.metric("Ram Type", f"{str(jumlah_brand)} Type", "40%")
+
+
+st.write("")
+st.header("Descriptive Statistic")
+# st.markdown("## Descriptive Statistic")
 st.write("")
 
 #
@@ -113,7 +140,7 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.subheader('Distribution Data')
+st.header('Distribution Data')
 option_columns = ["warranty", "msoffice", "os", "windows", "weight", "touchscreen"]
 option_columns_num = [
     "brand", "processor_brand",
@@ -162,7 +189,7 @@ def scatter_price_laptop(count, title, asc):
     )
     st.plotly_chart(fig, use_container_width=True)
 
-st.subheader("Best Pricy Laptop 2022")
+st.header("Best Pricy Laptop 2022")
 price_one, price_two = st.columns(2)
 
 with price_one:
@@ -175,13 +202,11 @@ with price_two:
 
 # RATINGS
 
-st.subheader("Best Rating Laptop 2022")
+st.header("Best Rating Laptop 2022")
 
 rating_col_1, rating_col_2 = st.columns([3,9])
 with rating_col_1:
-    # image = Image.open("../images/laptop-1.jpg")
     st.write("\n")
-    # st.image(image)
     st.write("Insert amount")
     color = st.select_slider(
         'Atur jumlah data yang akan ditampilkan',
@@ -190,7 +215,7 @@ with rating_col_1:
 with rating_col_2:
     rating_5, rating_4, rating_3, rating_2, rating_1 = st.tabs(["Rating :five:", "Rating :four:", "Rating :three:", "Rating :two:", "Rating :one:"])
 
-
+# FUNC DOT PLOTS RATING
 def dot_plots_rating_laptop(rating, bestnum):
     rating_filtered = laptop.loc[(laptop['rating']==rating)]
     sort_rating_price = rating_filtered.sort_values("price", ascending=False)
@@ -215,35 +240,108 @@ with rating_1:
     dot_plots_rating_laptop(rating=1, bestnum=color)
 
 
-st.header("Distribution Manufacturer Ram by Brand")
-# RAM SIZE ORDER
-column_count_plot = st.selectbox("Choose a column to plot count. Try Selecting Brand ",laptop['brand'].unique())
-ram_pie_1, ram_pie_2 = st.columns([6,6])
-with ram_pie_1:
-    fig = px.pie(laptop.loc[(laptop['brand'] == column_count_plot)], values='ram_gb',labels='ram_gb', names='ram_gb', color="ram_gb", title=f"Distribution of Ram Size Usage by Brand {column_count_plot}")
+# FUNC PIE CHART
+def pie_chart(columns, by, values, labels, names, color, title):
+    fig = px.pie(laptop.loc[(laptop[columns] == by)], values=values,labels=labels, names=names, color=color, title=f"{title}")
+
+    fig.update_layout(
+        xaxis_title=option,
+        yaxis_title="Count of " + option)
     st.plotly_chart(fig, use_container_width=True)
 
-with ram_pie_2:
-    ram_type_counts = laptop.groupby('brand')['ram_type'].value_counts()
-    value_counts =laptop[laptop['brand'] == column_count_plot]['ram_type'].value_counts().reset_index()
+# FUNC BAR CHART
+def bar_chart(by, columns, return1, return2, title):
+    value_counts = laptop[laptop[by] == option][columns].value_counts().reset_index()
 
-    value_counts.columns = ['Ram', 'Count']
+    value_counts.columns = [return1, return2]
 
     fig = px.bar(
         value_counts,
-        x='Ram',
-        y='Count',
-        text='Count',
-        color='Ram',
-        title=f"Distribution of Ram Type Usage by Brand {column_count_plot}")
+        x=value_counts.columns[0],
+        y=value_counts.columns[1],
+        text=value_counts.columns[1],
+        color=value_counts.columns[0],
+        title=f"{title}")
 
     fig.update_layout(
-        xaxis_title=column_count_plot,
-        yaxis_title="Count of " + column_count_plot)
+        xaxis_title=value_counts.columns[0],
+        yaxis_title="Count of " + value_counts.columns[0])
+
+    st.plotly_chart(fig, use_container_width=True)
+
+# RAM ORDER
+st.header("Distribution Manufacturer Ram by Brand")
+
+# FUNC SELECT BOX CUSTOM
+def select_box(title, column, key):
+    data = st.selectbox(title, laptop[column].unique(), key=key)
+    return data
+
+#
+option = select_box(title="Choose a column to plot count. Try Selecting Brand ", column="brand", key="ram")
+
+ram_pie_1, ram_pie_2 = st.columns([6,6])
+
+with ram_pie_1:
+    pie_chart(
+        columns="brand",
+        by=option,
+        values="ram_gb",
+        labels="ram_gb",
+        names="ram_gb",
+        color="ram_gb",
+        title=f"Distribution of Ram Size Usage by Brand {option}")
+
+with ram_pie_2:
+    bar_chart(
+        by="brand",
+        columns="ram_type",
+        return1="Ram Type",
+        return2="Count",
+        title=f"Distribution of Ram Type Usage by Brand {option}")
+
+# PROCESSOR ORDER
+st.header("Distribution Manufacturer Processor by Brand")
+
+option = select_box(title="Choose a column to plot count. Try Selecting Brand ", column="brand", key="procie")
+procie_1, procie_2 = st.columns([6,6])
+
+with procie_1:
+    # procie_type_count = laptop.groupby('brand')['processor_brand'].value_counts()
+    procie_value_count = laptop[laptop['brand'] == option]['processor_brand'].value_counts().reset_index()
+
+    fig = px.scatter(procie_value_count, x="processor_brand", y="count",
+                 size="count", color="processor_brand",
+                 hover_name="processor_brand", title=f"Distribution of Ram Type Usage \nby Brand {option}",)
+
+    fig.update_layout(
+        xaxis_title="Processor Brand",
+        yaxis_title="Count of Processor Brand")
 
     st.plotly_chart(fig, use_container_width=True)
 
 
 
+with procie_2:
+    bar_chart(
+        by="brand",
+        columns="processor_gnrtn",
+        return1="Processor Generation",
+        return2="Count",
+        title=f"Distribution of Processor Generation Usage \nby Brand {option}")
+
+# single line
+bar_chart(
+    by="brand",
+    columns="processor_name",
+    return1="Processor Name",
+    return2="Count",
+    title=f"Distribution of Processor Name Usage \nby Brand {option}")
 
 
+
+
+
+
+
+#%%
