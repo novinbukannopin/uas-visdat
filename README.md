@@ -1,8 +1,23 @@
-UAS Visualisasi Data
+## UAS Visualisasi Data
 
 - Data Cleaning
 - Exploratory Data Analysis with Excel & Python
 - Visualisasi using Streamlit
+
+## Dataset
+- Kaggle (Default)
+[Link](https://www.kaggle.com/datasets/dharmik34/laptop-price-prediction)
+### After Cleaning
+#### CSV
+- [Link](https://github.com/novinbukannopin/uas-visdat/blob/main/assets/clean/laptop-price.csv)
+#### Excel
+- [Link](https://github.com/novinbukannopin/uas-visdat/blob/main/assets/clean/laptop-price.xlsx)
+## Tech Stack
+
+- Python
+- Streamlit
+
+[See Requirement Details](https://github.com/novinbukannopin/uas-visdat/blob/main/requirements.txt)
 
 ## Contributors
 
