@@ -21,9 +21,9 @@ st.set_page_config(
 )
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-# st.markdown(f"<html style='scroll-behavior: smooth;'></html>", unsafe_allow_html=True)
-with open('style.css')as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+st.markdown(f"<html style='scroll-behavior: smooth;'></html>", unsafe_allow_html=True)
+# with open('style.css')as f:
+#     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 dataset_url = "https://raw.githubusercontent.com/novinbukannopin/uas-visdat/main/assets/clean/laptop-price.csv"
 
