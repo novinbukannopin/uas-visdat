@@ -62,7 +62,7 @@ col5.metric("Ram Type", f"{str(jumlah_brand)} Type", "40%")
 
 
 st.write("")
-st.header("Descriptive Statistic")
+st.header("Descriptive Statistic")#Descriptive Data Visualization
 # st.markdown("## Descriptive Statistic")
 st.write("")
 
@@ -95,21 +95,21 @@ def kpi(subheader, label, option_columns, method):
 kpi_count, kpi_mean, kpi_range = st.columns(3)
 with kpi_count:
     kpi(
-        subheader=":department_store: This is a Count Item",
+        subheader=":department_store: This is a Count Item", #Count, Count Data, Count Visualization, Count Data Visualization
         label="count",
         option_columns="all",
         method="counts")
 
 with kpi_mean:
     kpi(
-        subheader=":snowman: This is Average",
+        subheader=":snowman: This is Average", #Average, Average Data, AVG Data, Average Visualization, visualization of the mean
         label="mean",
         option_columns=(['price', 'rating']),
         method="mean")
 
 with kpi_range:
     kpi(
-        subheader=":snowman: This is Range",
+        subheader=":snowman: This is Range", #Range, Range Data, Range Visualization, Visualization of the data range
         label="range",
         option_columns=(['price', 'rating']),
         method="range")
@@ -117,10 +117,10 @@ with kpi_range:
 
 st.markdown("<hr/>",unsafe_allow_html=True)
 
-st.markdown("## Visualization Data")
+st.markdown("## Data Visualization") #Visualization of Data
 st.write("")
 
-st.subheader("Comparison of amounts ")
+st.subheader("Comparative Analysis") #comparative visualization
 column_count_plot = st.selectbox("Choose a column to plot count. Try Selecting Brand ",laptop.columns)
 colname = column_count_plot
 value_counts = laptop[column_count_plot].value_counts().reset_index()
@@ -140,7 +140,7 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.header('Distribution Data')
+st.header('Distribution Analysis') #Distribution Visualization
 option_columns = ["warranty", "msoffice", "os", "windows", "weight", "touchscreen"]
 option_columns_num = [
     "brand", "processor_brand",
@@ -189,29 +189,29 @@ def scatter_price_laptop(count, title, asc):
     )
     st.plotly_chart(fig, use_container_width=True)
 
-st.header("Best Pricy Laptop 2022")
+st.header("Top Priced Laptops by Brand in 2022")
 price_one, price_two = st.columns(2)
 
 with price_one:
     # 10 laptop termahal
-    scatter_price_laptop(10, "Top 10 Expensive Laptop", asc="asc")
+    scatter_price_laptop(10, "Top 10 Most Expensive Laptops", asc="asc")
 
     # 10 laptop termurah
 with price_two:
-    scatter_price_laptop(10, "Top 10 Cheap Laptop", asc="desc")
+    scatter_price_laptop(10, "Top 10 Affordable Laptops", asc="desc")
 
 # RATINGS
 
-st.header("Best Rating Laptop 2022")
+st.header("Best Rated Laptops in 2022")
 
 rating_col_1, rating_col_2 = st.columns([3,9])
 with rating_col_1:
     st.write("\n")
     st.write("Insert amount")
     color = st.select_slider(
-        'Atur jumlah data yang akan ditampilkan',
+        'Set the number of data to be displayed',
         options=[5, 10, 15, 20, 25, 30, 40, 50], key="rating_1")
-    st.write(f"Best {color} \n Laptop Ratings")
+    st.write(f"Top {color} \n Laptop Ratings")
 with rating_col_2:
     rating_5, rating_4, rating_3, rating_2, rating_1 = st.tabs(["Rating :five:", "Rating :four:", "Rating :three:", "Rating :two:", "Rating :one:"])
 
@@ -270,7 +270,7 @@ def bar_chart(by, columns, return1, return2, title):
     st.plotly_chart(fig, use_container_width=True)
 
 # RAM ORDER
-st.header("Distribution Manufacturer Ram by Brand")
+st.header(" Distribution of RAM by Manufacturer and Brand ") #RAM Distribution by Manufacturer Brand,RAM Distribution by Brand 
 
 # FUNC SELECT BOX CUSTOM
 def select_box(title, column, key):
@@ -290,7 +290,7 @@ with ram_pie_1:
         labels="ram_gb",
         names="ram_gb",
         color="ram_gb",
-        title=f"Distribution of Ram Size Usage by Brand {option}")
+        title=f"Distribution of RAM Size Usage by {option} Brand ")
 
 with ram_pie_2:
     bar_chart(
@@ -298,10 +298,10 @@ with ram_pie_2:
         columns="ram_type",
         return1="Ram Type",
         return2="Count",
-        title=f"Distribution of Ram Type Usage by Brand {option}")
+        title=f"Distribution of RAM Type Usage by {option} Brand ")
 
 # PROCESSOR ORDER
-st.header("Distribution Manufacturer Processor by Brand")
+st.header(" Distribution of Processors by Manufacturer and Brand") #Processor Distribution by Manufacturer and Brand, Processor Distribution by Manufacturer and Brand.
 
 option = select_box(title="Choose a column to plot count. Try Selecting Brand ", column="brand", key="procie")
 procie_1, procie_2 = st.columns([6,6])
@@ -312,7 +312,7 @@ with procie_1:
 
     fig = px.scatter(procie_value_count, x="processor_brand", y="count",
                  size="count", color="processor_brand",
-                 hover_name="processor_brand", title=f"Distribution of Ram Type Usage \nby Brand {option}",)
+                 hover_name="processor_brand", title=f"Distribution of Ram Type Usage \nby {option} Brand",)
 
     fig.update_layout(
         xaxis_title="Processor Brand",
@@ -328,7 +328,7 @@ with procie_2:
         columns="processor_gnrtn",
         return1="Processor Generation",
         return2="Count",
-        title=f"Distribution of Processor Generation Usage \nby Brand {option}")
+        title=f"Distribution of Processor Generation Usage \nby {option} Brand")
 
 # single line
 bar_chart(
@@ -336,7 +336,7 @@ bar_chart(
     columns="processor_name",
     return1="Processor Name",
     return2="Count",
-    title=f"Distribution of Processor Name Usage \nby Brand {option}")
+    title=f"Distribution of Processor Name Usage \nby {option} Brand")
 
 
 
