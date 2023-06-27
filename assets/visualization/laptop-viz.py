@@ -18,6 +18,7 @@ st.set_page_config(
     page_title="Real-Time Data Laptop Pricing",
     page_icon="✅",
     layout="wide",
+    initial_sidebar_state="collapsed"
 )
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -33,140 +34,22 @@ def get_data() -> pd.DataFrame:
 
 laptop = get_data()
 
-st.title("Real-Time / Live Data Laptop Dashboard")
-
-st.markdown('''
-        This dataset represents various models of laptops from various brands with features such as brand, processor_brand, processor_name, ram_gb, ram_type, SSD, HDD, os, os_bit, graphic_card_gb, weight, warranty, touch screen, MSOffice, price, rating, Number of Ratings, Number of Reviews. Here, price is an independent variable so this dataset can be used for regression analysis to predict the prices of laptops based on their features.
-    ''')
-
 st.sidebar.markdown('''
-# Sections
-- [Descriptive Statistic](#descriptive-statistic)
-- [Metric](#metric)
+> Sections Introduction
+1. [Top Priced Laptops by Brand in 2022](#top-priced-laptops-by-brand-in-2022)
+2. [Best Rated Laptops in 2022](#best-rated-laptops-in-2022)
+3. [Distribution of RAM by Manufacturer and Brand](#distribution-of-ram-by-manufacturer-and-brand)
+4. [Distribution of Processors by Manufacturer and Brand](#distribution-of-ram-by-manufacturer-and-brand)
+5. [Persebaran Sistem Operasi](#persebaran-sistem-operasi)
+5. [Grafik Berat Laptop Berdasarkan Brand](#grafik-berat-laptop-berdasarkan-brand)
+5. [Grafik Laptop Touchscreen](#-grafik-laptop-touchscreen)
+5. [Grafik Laptop Yang Mendapatkan MS Office](#grafik-laptop-yang-mendapatkan-ms-office)
 ''', unsafe_allow_html=True)
 
-st.header("METRIC")
-
-jumlah_brand = len(laptop['brand'].unique())
-processor_name = len(laptop['processor_name'].unique())
-processor_brand = len(laptop['processor_brand'].unique())
-ram_type = len(laptop['ram_type'].unique())
-total_product = len(laptop['brand'])
-
-col1, col2, col3, col4, col5 = st.columns(5)
-col1.metric("Total Product", f"{str(total_product)} Product", "20%")
-col2.metric("Brand Laptop", f"{str(jumlah_brand)} Brand", "-8%")
-col3.metric("Processor", f"{str(processor_name)} Type", "15%")
-col4.metric("Brand Procie", f"{str(processor_brand)} Brand", "5%")
-col5.metric("Ram Type", f"{str(jumlah_brand)} Type", "40%")
-
-
-st.write("")
-st.header("Descriptive Statistic")#Descriptive Data Visualization
-# st.markdown("## Descriptive Statistic")
-st.write("")
-
-#
-def kpi(subheader, label, option_columns, method):
-    st.subheader(subheader)
-    if option_columns == "all":
-        hue_opt = st.selectbox(label=label, options=laptop.columns)
-    else:
-        hue_opt = st.selectbox(label=label, options=option_columns)
-
-    column = hue_opt.lower()
-    title = hue_opt.replace("_", " ").upper()
-    st.markdown(f"<h4 style='text-align: center; color: #6554AF;'>{title}</h3>", unsafe_allow_html=True)
-    count = laptop[column].nunique()
-    if count != None:
-        st.markdown(f"<h1 style='text-align: center; color: #9575DE;'>{count} item</h1>", unsafe_allow_html=True)
-        if method == "counts":
-            st.table(laptop[column].value_counts())
-        elif method == "mean":
-            st.table(laptop[column].groupby(laptop['brand']).mean())
-        elif method == "range":
-            min_value = laptop[column].groupby(laptop['brand']).min()
-            max_value = laptop[column].groupby(laptop['brand']).max()
-            range = max_value - min_value
-            st.table(
-                {"range": range, "min": min_value, "max": max_value}
-            )
-
-kpi_count, kpi_mean, kpi_range = st.columns(3)
-with kpi_count:
-    kpi(
-        subheader=":department_store: This is a Count Item", #Count, Count Data, Count Visualization, Count Data Visualization
-        label="count",
-        option_columns="all",
-        method="counts")
-
-with kpi_mean:
-    kpi(
-        subheader=":snowman: This is Average", #Average, Average Data, AVG Data, Average Visualization, visualization of the mean
-        label="mean",
-        option_columns=(['price', 'rating']),
-        method="mean")
-
-with kpi_range:
-    kpi(
-        subheader=":snowman: This is Range", #Range, Range Data, Range Visualization, Visualization of the data range
-        label="range",
-        option_columns=(['price', 'rating']),
-        method="range")
-
-
-st.markdown("<hr/>",unsafe_allow_html=True)
-
-st.markdown("## Data Visualization") #Visualization of Data
-st.write("")
-
-st.subheader("Comparative Analysis") #comparative visualization
-column_count_plot = st.selectbox("Choose a column to plot count. Try Selecting Brand ",laptop.columns)
-colname = column_count_plot
-value_counts = laptop[column_count_plot].value_counts().reset_index()
-value_counts.columns = ['Data', 'Count']
-
-fig = px.bar(
-    value_counts,
-    x='Data',
-    y='Count',
-    text='Count',
-    color='Data',
-    title="Bar Chart")
-
-fig.update_layout(
-    xaxis_title=column_count_plot,
-    yaxis_title="Count of " + column_count_plot)
-
-st.plotly_chart(fig, use_container_width=True)
-
-st.header('Distribution Analysis') #Distribution Visualization
-option_columns = ["warranty", "msoffice", "os", "windows", "weight", "touchscreen"]
-option_columns_num = [
-    "brand", "processor_brand",
-    "processor_name", "processor_gnrtn",
-    "ram_type", "ram_gb",
-    'ssd', 'hdd']
-
-choice_categorical = st.selectbox("Choose the enabled variable used for the x-axis. Try Selecting Warranty", options=option_columns)
-
-choice_categorical_num = st.selectbox("Choose the enabled variable used for the legend. Try Selecting Brand", options=option_columns_num)
-
-value_counts = laptop[choice_categorical_num]\
-    .groupby(laptop[choice_categorical])\
-    .value_counts()\
-    .reset_index()
-
-value_counts.columns = ['Data', choice_categorical_num, 'Count']
-
-fig = px.histogram(
-    value_counts,
-    x="Data",
-    y="Count",
-    color=choice_categorical_num,
-    title="Histogram of " +choice_categorical)
-
-st.plotly_chart(fig, use_container_width=True)
+# Persebaran Sistem Operasi
+# Grafik Berat Laptop Berdasarkan Brand
+# Grafik Laptop Touchscreen
+# Grafik Laptop Yang Mendapatkan MS Office
 
 # PRICEY
 def scatter_price_laptop(count, title, asc):
@@ -250,7 +133,7 @@ def pie_chart(columns, by, values, labels, names, color, title):
     st.plotly_chart(fig, use_container_width=True)
 
 # FUNC BAR CHART
-def bar_chart(by, columns, return1, return2, title):
+def bar_chart(by, columns, return1, return2, title, orientation):
     value_counts = laptop[laptop[by] == option][columns].value_counts().reset_index()
 
     value_counts.columns = [return1, return2]
@@ -261,7 +144,7 @@ def bar_chart(by, columns, return1, return2, title):
         y=value_counts.columns[1],
         text=value_counts.columns[1],
         color=value_counts.columns[0],
-        title=f"{title}")
+        title=f"{title}", orientation=orientation)
 
     fig.update_layout(
         xaxis_title=value_counts.columns[0],
@@ -270,7 +153,7 @@ def bar_chart(by, columns, return1, return2, title):
     st.plotly_chart(fig, use_container_width=True)
 
 # RAM ORDER
-st.header(" Distribution of RAM by Manufacturer and Brand ") #RAM Distribution by Manufacturer Brand,RAM Distribution by Brand 
+st.header("Distribution of RAM by Manufacturer and Brand") #RAM Distribution by Manufacturer Brand,RAM Distribution by Brand
 
 # FUNC SELECT BOX CUSTOM
 def select_box(title, column, key):
@@ -298,10 +181,10 @@ with ram_pie_2:
         columns="ram_type",
         return1="Ram Type",
         return2="Count",
-        title=f"Distribution of RAM Type Usage by {option} Brand ")
+        title=f"Distribution of RAM Type Usage by {option} Brand ", orientation="v")
 
 # PROCESSOR ORDER
-st.header(" Distribution of Processors by Manufacturer and Brand") #Processor Distribution by Manufacturer and Brand, Processor Distribution by Manufacturer and Brand.
+st.header("Distribution of Processors by Manufacturer and Brand") #Processor Distribution by Manufacturer and Brand, Processor Distribution by Manufacturer and Brand.
 
 option = select_box(title="Choose a column to plot count. Try Selecting Brand ", column="brand", key="procie")
 procie_1, procie_2 = st.columns([6,6])
@@ -328,7 +211,7 @@ with procie_2:
         columns="processor_gnrtn",
         return1="Processor Generation",
         return2="Count",
-        title=f"Distribution of Processor Generation Usage \nby {option} Brand")
+        title=f"Distribution of Processor Generation Usage \nby {option} Brand", orientation="v")
 
 # single line
 bar_chart(
@@ -336,11 +219,170 @@ bar_chart(
     columns="processor_name",
     return1="Processor Name",
     return2="Count",
-    title=f"Distribution of Processor Name Usage \nby {option} Brand")
+    title=f"Distribution of Processor Name Usage \nby {option} Brand", orientation="v")
 
 
+#
+# Tentu! Berikut beberapa rekomendasi judul untuk chart yang dapat ditampilkan di dashboard berdasarkan data laptop yang Anda berikan:
+#
+# Perbandingan Harga Laptop Berdasarkan Brand
+# Distribusi Prosesor Berdasarkan Brand
+# Grafik Jenis RAM yang Digunakan pada Laptop
+# Persentase Laptop dengan SSD dan HDD
+# Penyebaran Sistem Operasi pada Laptop
+# Rasio Laptop dengan Grafik Kard Terintegrasi dan Diskret
+# Grafik Berat Laptop Berdasarkan Brand
+# Durasi Garansi Laptop pada Berbagai Brand
+# Persentase Laptop dengan Layar Sentuh
+# Pemakaian Microsoft Office pada Laptop
+
+# ssd hdd
+
+st.header("Persentase Laptop dengan SSD dan HDD") #
+
+option = select_box(title="Choose a column to plot count. Try Selecting Brand ", column="brand", key="ssd_hdd")
+ssd, hdd = st.columns([6,6])
+
+with ssd:
+    pie_chart(
+        columns="brand",
+        by=option,
+        values="ssd",
+        labels="ssd",
+        names="ssd",
+        color="ssd",
+        title=f"Distribution of RAM Size Usage by {option} Brand ")
+
+with hdd:
+    pie_chart(
+        columns="brand",
+        by=option,
+        values="hdd",
+        labels="hdd",
+        names="hdd",
+        color="hdd",
+        title=f"Distribution of RAM Size Usage by {option} Brand ")
+
+# ssd hdd
+st.header("Persebaran Sistem Operasi") #
+
+os, os_bit = st.columns([5,7])
+with os:
+    os = laptop.groupby(['brand', 'os', 'os_bit']).size().reset_index(name="count")
+    fig = px.bar(os, x="brand", y="count", color="os", barmode="group", title="\n Persebaran semua")
+    st.plotly_chart(fig, use_container_width=True)
+
+with os_bit:
+    option = select_box(title="Choose a column to plot count. Try Selecting ASUS ", column="brand", key="os")
+    option_laptop = laptop.loc[laptop['brand'] == option]
+    os_brand, os_bit_brand = st.columns([6,6])
+    with os_brand:
+        os = option_laptop.groupby(['brand', 'os', 'os_bit']).size().reset_index(name="count")
+        fig = px.bar(os, x="brand", y="count", color="os_bit", barmode="group")
+        st.plotly_chart(fig, use_container_width=True)
+
+    with os_bit_brand:
+        os = option_laptop.groupby(['brand', 'os', 'os_bit']).size().reset_index(name="count")
+        fig = px.bar(os, x="brand", y="count", color="os", barmode="group")
+        st.plotly_chart(fig, use_container_width=True)
+
+# weight
+st.header("Grafik Berat Laptop Berdasarkan Brand")
+os = laptop.groupby(['weight', 'brand']).size().reset_index(name="count")
+fig = px.bar(os, x="brand", y="count", color="weight", barmode="group", title="\n Persebaran semua")
+st.plotly_chart(fig, use_container_width=True)
+# warranty
+st.header("Grafik Garansi Laptop Berdasarkan Brand")
+os = laptop.groupby(['warranty', 'brand']).size().reset_index(name="count")
+fig = px.bar(os, x="brand", y="count", color="warranty", title="\n Persebaran semua dalam tahun")
+st.plotly_chart(fig, use_container_width=True)
 
 
+# touchscreen
+st.header("Grafik Laptop Touchscreen")
+
+touchscreen_counts = laptop[laptop['touchscreen'] == True]['brand'].value_counts().reset_index()
+touchscreen_counts.columns = ['brand', 'touchscreen_count']
+
+non_touchscreen_counts = laptop[laptop['touchscreen'] == False]['brand'].value_counts().reset_index()
+non_touchscreen_counts.columns = ['brand', 'non_touchscreen_count']
+
+merged_counts = touchscreen_counts.merge(non_touchscreen_counts, on='brand', how='outer')
+merged_counts = merged_counts.fillna(0)
+
+total_counts = merged_counts['touchscreen_count'] + merged_counts['non_touchscreen_count']
+merged_counts['touchscreen_percentage'] = (merged_counts['touchscreen_count'] / total_counts) * 100
+merged_counts['non_touchscreen_percentage'] = (merged_counts['non_touchscreen_count'] / total_counts) * 100
+
+fig = go.Figure()
+
+fig.add_trace(go.Bar(
+    x=merged_counts['brand'],
+    y=merged_counts['touchscreen_count'],
+    name='Touchscreen',
+    textposition='auto',
+    hovertemplate='Brand: %{x}<br>Touchscreen Count: %{y}'
+))
+
+fig.add_trace(go.Bar(
+    x=merged_counts['brand'],
+    y=merged_counts['non_touchscreen_count'],
+    name='Non-Touchscreen',
+    textposition='auto',
+    hovertemplate='Brand: %{x}<br>Non-Touchscreen Count: %{y}'
+))
+
+fig.update_layout(
+    barmode='stack',
+    title='Touchscreen vs Non-Touchscreen Laptops by Brand',
+    xaxis_title='Brand',
+    yaxis_title='Count'
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+# Office
+st.header("Grafik Laptop Yang Mendapatkan MS Office")
+
+msoffice_counts = laptop[laptop['msoffice'] == True]['brand'].value_counts().reset_index()
+msoffice_counts.columns = ['brand', 'msoffice_count']
+
+non_msoffice_counts = laptop[laptop['msoffice'] == False]['brand'].value_counts().reset_index()
+non_msoffice_counts.columns = ['brand', 'non_msoffice_count']
+
+merged_counts = msoffice_counts.merge(non_msoffice_counts, on='brand', how='outer')
+merged_counts = merged_counts.fillna(0)
+
+total_counts = merged_counts['msoffice_count'] + merged_counts['non_msoffice_count']
+merged_counts['msoffice_percentage'] = (merged_counts['msoffice_count'] / total_counts) * 100
+merged_counts['non_msoffice_percentage'] = (merged_counts['non_msoffice_count'] / total_counts) * 100
+
+fig = go.Figure()
+
+fig.add_trace(go.Bar(
+    x=merged_counts['brand'],
+    y=merged_counts['msoffice_count'],
+    name='Touchscreen',
+    textposition='auto',
+    hovertemplate='Brand: %{x}<br>Touchscreen Count: %{y}'
+))
+
+fig.add_trace(go.Bar(
+    x=merged_counts['brand'],
+    y=merged_counts['non_msoffice_count'],
+    name='Non-Touchscreen',
+    textposition='auto',
+    hovertemplate='Brand: %{x}<br>Non-Touchscreen Count: %{y}'
+))
+
+fig.update_layout(
+    barmode='stack',
+    title='Touchscreen vs Non-Touchscreen Laptops by Brand',
+    xaxis_title='Brand',
+    yaxis_title='Count'
+)
+
+st.plotly_chart(fig, use_container_width=True)
 
 
 
