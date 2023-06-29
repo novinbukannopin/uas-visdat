@@ -40,10 +40,12 @@ st.sidebar.markdown('''
 2. [Best Rated Laptops in 2022](#best-rated-laptops-in-2022)
 3. [Distribution of RAM by Manufacturer and Brand](#distribution-of-ram-by-manufacturer-and-brand)
 4. [Distribution of Processors by Manufacturer and Brand](#distribution-of-ram-by-manufacturer-and-brand)
-5. [Persebaran Sistem Operasi](#persebaran-sistem-operasi)
-5. [Grafik Berat Laptop Berdasarkan Brand](#grafik-berat-laptop-berdasarkan-brand)
-5. [Grafik Laptop Touchscreen](#-grafik-laptop-touchscreen)
-5. [Grafik Laptop Yang Mendapatkan MS Office](#grafik-laptop-yang-mendapatkan-ms-office)
+5. [Distribution of Operating Systems](#Distribution-of-Operating-Systems)
+6. [Percentage of Laptops with SSD and HDD](#Percentage-of-Laptops-with-SSD-and-HDD)
+7. [Brand-based Weight Graph](#Brand-based-Weight-Graph)
+8. [Brand-based Warranty Graph](#Brand-based-Warranty-Graph)
+9. [Touchscreen Laptop Graph](#Touchscreen-Laptop-Graph)
+10. [MS Office-enabled Laptop Graph](#MS Office-enabled-Laptop-Graph)
 ''', unsafe_allow_html=True)
 
 # Persebaran Sistem Operasi
@@ -238,7 +240,7 @@ bar_chart(
 
 # ssd hdd
 
-st.header("Persentase Laptop dengan SSD dan HDD") #
+st.header("Percentage of Laptops with SSD and HDD") #
 
 option = select_box(title="Choose a column to plot count. Try Selecting Brand ", column="brand", key="ssd_hdd")
 ssd, hdd = st.columns([6,6])
@@ -264,12 +266,12 @@ with hdd:
         title=f"Distribution of RAM Size Usage by {option} Brand ")
 
 # ssd hdd
-st.header("Persebaran Sistem Operasi") #
+st.header("Distribution of Operating Systems") #
 
 os, os_bit = st.columns([5,7])
 with os:
     os = laptop.groupby(['brand', 'os', 'os_bit']).size().reset_index(name="count")
-    fig = px.bar(os, x="brand", y="count", color="os", barmode="group", title="\n Persebaran semua")
+    fig = px.bar(os, x="brand", y="count", color="os", barmode="group", title="\n Data Distribution Chart") #semua
     st.plotly_chart(fig, use_container_width=True)
 
 with os_bit:
@@ -287,19 +289,19 @@ with os_bit:
         st.plotly_chart(fig, use_container_width=True)
 
 # weight
-st.header("Grafik Berat Laptop Berdasarkan Brand")
+st.header("Brand-based Weight Graph") #Brand-based Weight Chart
 os = laptop.groupby(['weight', 'brand']).size().reset_index(name="count")
-fig = px.bar(os, x="brand", y="count", color="weight", barmode="group", title="\n Persebaran semua")
+fig = px.bar(os, x="brand", y="count", color="weight", barmode="group", title="\n Data Distribution Chart") #semua
 st.plotly_chart(fig, use_container_width=True)
 # warranty
-st.header("Grafik Garansi Laptop Berdasarkan Brand")
+st.header("Brand-based Warranty Graph")
 os = laptop.groupby(['warranty', 'brand']).size().reset_index(name="count")
-fig = px.bar(os, x="brand", y="count", color="warranty", title="\n Persebaran semua dalam tahun")
+fig = px.bar(os, x="brand", y="count", color="warranty", title="\n Data Distribution Chart for a Specific Year") #yearly data distribution
 st.plotly_chart(fig, use_container_width=True)
 
 
 # touchscreen
-st.header("Grafik Laptop Touchscreen")
+st.header("Touchscreen Laptop Graph")
 
 touchscreen_counts = laptop[laptop['touchscreen'] == True]['brand'].value_counts().reset_index()
 touchscreen_counts.columns = ['brand', 'touchscreen_count']
@@ -342,7 +344,7 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True)
 
 # Office
-st.header("Grafik Laptop Yang Mendapatkan MS Office")
+st.header("MS Office-enabled Laptop Graph")
 
 msoffice_counts = laptop[laptop['msoffice'] == True]['brand'].value_counts().reset_index()
 msoffice_counts.columns = ['brand', 'msoffice_count']
