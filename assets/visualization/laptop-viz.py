@@ -36,7 +36,7 @@ def get_data() -> pd.DataFrame:
 
 laptop = get_data()
 
-st.sidebar.image("../images/laptop-1.jpg")
+# st.sidebar.image("../images/laptop-1.jpg")
 st.markdown(
     """
     <style>
