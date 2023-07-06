@@ -20,6 +20,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
 )
+
 st.set_option("deprecation.showPyplotGlobalUse", False)
 
 st.markdown(f"<html style='scroll-behavior: smooth;'></html>", unsafe_allow_html=True)
@@ -270,7 +271,7 @@ with procie_1:
         size="count",
         color="processor_brand",
         hover_name="processor_brand",
-        title=f"Distribution of Ram Type Usage \nby {option} Brand",
+        title=f"Distribution of Processor Brand \nby {option} Brand",
     )
 
     fig.update_layout(
@@ -334,7 +335,7 @@ with ssd:
         labels="ssd",
         names="ssd",
         color="ssd",
-        title=f"Distribution of RAM Size Usage by {option} Brand ",
+        title=f"Distribution of SSD Storage by {option} Brand ",
     )
 
 with hdd:
@@ -345,7 +346,7 @@ with hdd:
         labels="hdd",
         names="hdd",
         color="hdd",
-        title=f"Distribution of RAM Size Usage by {option} Brand ",
+        title=f"Distribution of HDD Storage by {option} Brand ",
     )
 
 # ssd hdd
@@ -522,7 +523,7 @@ fig.add_trace(
 
 fig.update_layout(
     barmode="stack",
-    title="Touchscreen vs Non-Touchscreen Laptops by Brand",
+    title="Distribution Included Microsoft Office Laptops by Brand",
     xaxis_title="Brand",
     yaxis_title="Count",
 )
